@@ -116,4 +116,4 @@ while(choose_per != 0){
             break;
         }
         choose_per = prompt("¿que es lo que buscas?\n1-teclados\n2-ratones\n3-auriculares\n4-calcular envio\n0-salir"); 
-    };  
+    }; 
