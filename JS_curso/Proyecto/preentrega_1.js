@@ -1,5 +1,16 @@
+function CalcularEnvio(){
+    let envio = 0
+    if (carrito >= 700) {
+        envio = carrito * 0.05
+    } else {
+        envio = carrito * 0.1
+    }
+
+    return envio
+}
+
 alert("bienvenido a la tienda");
-let choose_per = prompt("¿que es lo que buscas?\n1-teclados\n2-ratones\n3-auriculares\n0-salir");
+let choose_per = prompt("¿que es lo que buscas?\n1-teclados\n2-ratones\n3-auriculares\n4-calcular envio\n0-salir");
 let carrito = 0
 while(choose_per != 0){
     switch(choose_per){
@@ -59,18 +70,50 @@ while(choose_per != 0){
                 }
             break;
         case "3":
-            let headsets = prompt("elige un auricular\n1-corsair-HS80 -120$\n2-Astro-A50 -150$\n3-Razer BlackShark V2 -90$")
+            let headsets = prompt("elige un auricular\n1-corsair-HS80 -120$\n2-Astro-A50 -150$\n3-Razer BlackShark V2 -90$\n0-atras")
                 while(headsets != 0){
                     switch(headsets){
                         case "1":
                             carrito = carrito + 120
                             alert ("has agregado un auricular corsair-HS80")
+                            alert("total en el carrito: " + carrito + " $")
+                            break;
+
+                        case "2":
+                            carrito = carrito + 150
+                            alert("has agregado un auricular Astro-A50")
+                            alert("total en el carrito: " + carrito + " $")
+                            break;
+                        case "3":
+                            carrito = carrito + 90
+                            alert("has agregado un auricular Razer BlackShark V2")
+                            alert("total en el carrito: " + carrito + " $")
+                            break;
+                        default:
+                            alert("accion invalida")
+                            break;
                     }
+                    headsets = prompt("elige un auricular\n1-corsair-HS80 -120$\n2-Astro-A50 -150$\n3-Razer BlackShark V2 -90$\n0-atras")
+                }
+            break;
+        case "4":
+            let CostoEnvio = prompt("\n1-calcular envio\n0-atras")
+                while(CostoEnvio != 0){
+                    switch(CostoEnvio){
+                        case "1":
+                            alert("el costo del envio es " + CalcularEnvio() + " $")
+                            break;
+                        default:
+                            alert("accion invalida")
+                            break;
+                    }
+                    CostoEnvio = prompt("\n1-calcular envio\n0-atras")
                 }    
+            break;
 
         default:
             alert("accion invalida");
             break;
         }
-        choose_per = prompt("¿que es lo que buscas?\n1-teclados\n2-ratones\n3-auriculares\n0-salir"); 
+        choose_per = prompt("¿que es lo que buscas?\n1-teclados\n2-ratones\n3-auriculares\n4-calcular envio\n0-salir"); 
     };
