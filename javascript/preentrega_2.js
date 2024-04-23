@@ -1,67 +1,18 @@
-const residentsData = [
-    {
-      name: "Juan Pérez",
-      age: 78,
-      roomNumber: 101,
-      admissionDate: new Date("2020-05-01"),
-      healthCondition: "Diabetes y problemas cardíacos",
-      familyContact: {
-        name: "María Gómez",
-        relationship: "Hija",
-        phone: "555-1234"
-      }
-    },
-    {
-      name: "María Rodríguez",
-      age: 82,
-      roomNumber: 203,
-      admissionDate: new Date("2018-09-15"),
-      healthCondition: "Alzheimer",
-      familyContact: {
-        name: "Pedro Ramírez",
-        relationship: "Hijo",
-        phone: "555-5678"
-      }
-    },
-    {
-      name: "Carlos Sánchez",
-      age: 75,
-      roomNumber: 115,
-      admissionDate: new Date("2022-03-20"),
-      healthCondition: "Parkinson",
-      familyContact: {
-        name: "Lucía Díaz",
-        relationship: "Esposa",
-        phone: "555-9012"
-      }
-    },
-    {
-      name: "Elena Fernández",
-      age: 88,
-      roomNumber: 307,
-      admissionDate: new Date("2019-11-01"),
-      healthCondition: "Osteoporosis",
-      familyContact: {
-        name: "Jorge Fernández",
-        relationship: "Nieto",
-        phone: "555-3456"
-      }
-    },
-    {
-      name: "Miguel Jiménez",
-      age: 72,
-      roomNumber: 204,
-      admissionDate: new Date("2021-08-01"),
-      healthCondition: "Hipertensión",
-      familyContact: {
-        name: "Ana Suárez",
-        relationship: "Sobrina",
-        phone: "555-7890"
-      }
-    }
-  ];
+let login = document.getElementById("login");
 
-  class paciente{
+  login.addEventListener(`submit`, (NoSave) => {
+    NoSave.preventDefault()
+
+    let user = document.getElementById("user").value;
+    let password = document.getElementById("password").value;
+
+    if(user == localStorage.getItem('usuario') && password == localStorage.getItem('contraseña')){
+      window.location.href = 'residentList.html'
+    }else{
+      alert("usuario y/o contraseña incorrectos");
+    }
+  });
+  /*class paciente{
     constructor(nombre, edad, numero_de_cuarto, fechaAdmision, condicionSalud, contactoFamiliarnombre,contactoFamiliarrelacion, contactoFamiliartelefono ){
         this.name = nombre;
         this.age = edad;
@@ -165,4 +116,4 @@ while(PMenu != 0){
 
     }
     PMenu = prompt(`¿que quieres hacer?\n1-buscar paciente\n2-añadir nuevo paciente\n3-eliminar paciente\n0-salir`)
-}
+} */
