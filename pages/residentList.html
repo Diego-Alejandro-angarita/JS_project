@@ -15,18 +15,39 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="residentes">
-
+    <main class="listResident">>
+        <section>
+            <form id="addResident">
+                <p>llena los datos para añadir un nuevo residente</p>
+                <label for="addName">escribe el nombre del nuevo residente</label>
+                <input id="addName" type="text">
+                <label for="addAge">escriba la edad del nuevo residente</label>
+                <input id="addAge" type="number">
+                <label for="addRoomNumber">escribe el numero de cuarto del nuevo residente</label>
+                <input id="addRoomNumber" type="number">
+                <label for="addAdmissionDate">escribe la fecha de ingreso del nuevo residente</label>
+                <input id="addAdmissionDate" type="date">
+                <label for="addHealthCondition">escribe la condicion de salud del nuevo residente</label>
+                <input id="addHealthCondition" type="text">
+                <label for="addFamiliarName">escribe el nombre del familiar del residente</label>
+                <input id="addFamiliarName" type="text">
+                <label for="addFamiliarRelationship">escribe el parentezco del familiar con el nuevo residente</label>
+                <input id="addFamiliarRelationship" type="text">
+                <label for="addFamiliarPhone">escribe el numero de telefono del familiar del nuevo residente</label>
+                <input id="addFamiliarPhone" type="text">
+                <button onclick="añadirPaciente()">añadir nuevo residente</button>
+            </form>
         </section>
         <section>
             <form id="filtResident">
                 <input id="filtResidentInput" type="text" placeholder="escribe el nombre del paciente que deseas ver">
             </form>
             <div id="residente-filtrado">
-                
-                <button onclick="nombrefiltrado()">buscar</button>
+                <button onclick="nombrefiltrado();">buscar</button>
             </div>
+        </section>
+        <section id="residentes">
+
         </section>
     </main>
 

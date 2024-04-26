@@ -3,7 +3,7 @@ const residentsData = [
       name: "Juan Pérez",
       age: 78,
       roomNumber: 101,
-      admissionDate: new Date("2020-05-01"),
+      admissionDate: new Date("2020-05-01").toLocaleDateString(),
       healthCondition: "Diabetes y problemas cardíacos",
       familyContact: {
         name: "María Gómez",
@@ -15,7 +15,7 @@ const residentsData = [
       name: "María Rodríguez",
       age: 82,
       roomNumber: 203,
-      admissionDate: new Date("2018-09-15"),
+      admissionDate: new Date("2018-09-15").toLocaleDateString(),
       healthCondition: "Alzheimer",
       familyContact: {
         name: "Pedro Ramírez",
@@ -27,7 +27,7 @@ const residentsData = [
       name: "Carlos Sánchez",
       age: 75,
       roomNumber: 115,
-      admissionDate: new Date("2022-03-20"),
+      admissionDate: new Date("2022-03-20").toLocaleDateString(),
       healthCondition: "Parkinson",
       familyContact: {
         name: "Lucía Díaz",
@@ -39,7 +39,7 @@ const residentsData = [
       name: "Elena Fernández",
       age: 88,
       roomNumber: 307,
-      admissionDate: new Date("2019-11-01"),
+      admissionDate: new Date("2019-11-01").toLocaleDateString(),
       healthCondition: "Osteoporosis",
       familyContact: {
         name: "Jorge Fernández",
@@ -51,12 +51,13 @@ const residentsData = [
       name: "Miguel Jiménez",
       age: 72,
       roomNumber: 204,
-      admissionDate: new Date("2021-08-01"),
+      admissionDate: new Date("2021-08-01").toLocaleDateString(),
       healthCondition: "Hipertensión",
       familyContact: {
         name: "Ana Suárez",
         relationship: "Sobrina",
         phone: "555-7890"
       }
-    }
+    },
+    
   ];

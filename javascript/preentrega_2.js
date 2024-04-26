@@ -1,6 +1,6 @@
 let login = document.getElementById("login");
 
-  login.addEventListener(`submit`, (NoSave) => {
+  login.addEventListener('submit', (NoSave) => {
     NoSave.preventDefault()
 
     let user = document.getElementById("user").value;
